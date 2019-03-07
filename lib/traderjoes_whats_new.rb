@@ -1,6 +1,3 @@
-require "traderjoes_whats_new/version"
-
-module TraderjoesWhatsNew
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./traderjoes_whats_new/version"
+require_relative './traderjoes_whats_new/cli'
+require_relative './traderjoes_whats_new/whatsnew'

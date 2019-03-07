@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "traderjoes_whats_new"
+
+TraderjoesWhatsNew::CLI.new.call
