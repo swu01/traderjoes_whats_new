@@ -9,8 +9,9 @@ class TraderjoesWhatsNew::CLI
 
   def list_whats_new
     @whatsnew = TraderjoesWhatsNew::WhatsNew.today
-    @whatsnew.each.with_index(1) do |deal, i|
-      puts "#{i}. #{deal.name} - #{deal.date} - #{deal.description}."
+    @whatsnew.each.with_index(1) do |whatsnew, i|
+      puts "#{i}. #{whatsnew.name} - #{whatsnew.date} - #{whatsnew.description}."
+      puts "Click here for link: #{whatsnew.url}"
     end
   end
 
