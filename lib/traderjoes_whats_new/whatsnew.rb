@@ -19,9 +19,17 @@ class TraderjoesWhatsNew::WhatsNew
 
   def self.scrape_traderjoes
     doc = Nokogiri::HTML(open("https://www.traderjoes.com/digin/category/What's%20New"))
-    # name = doc.css("article h1")
-    # date = doc.css("article .timestamp")
-    # description = doc.css("aricle .p")
+    binding.pry
+    <<-DOC
+    main page = doc.css("#contentbegin").text
+    name = doc.css("#contentbegin h1")
+    date = doc.css(".article  .timestamp strong").first.text
+    description = doc.css("article .p")
+    ->> 
+
+    # lists all products = doc.css("article h1")
+
+
     # url =
   end
 end
