@@ -10,7 +10,7 @@ class TraderjoesWhatsNew::CLI
   def list_whats_new
     @whatsnew = TraderjoesWhatsNew::WhatsNew.today
     @whatsnew.each.with_index(1) do |deal, i|
-      puts "#{i}. #{deal.name} - #{deal.description} -#{deal.price}"
+      puts "#{i}. #{deal.name} - #{deal.description} - #{deal.price}."
     end
   end
 

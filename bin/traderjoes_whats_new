@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 require "bundler/setup"
-require "./lib/traderjoes_whats_new"
+require_relative "../config/environment.rb"
 
 TraderjoesWhatsNew::CLI.new.call
