@@ -7,7 +7,7 @@ class TraderjoesWhatsNew::CLI
   end
 
   def list_whats_new
-    @whatsnew = []
+
     puts ""
     puts "---------- Welcome to TRADER JOE'S ----------"
     puts "------- Below is a list of WHATS NEW: -------"
@@ -16,12 +16,15 @@ class TraderjoesWhatsNew::CLI
     @whatsnew.each.with_index(1) do |whatsnew, i|
       puts "#{i}. #{whatsnew.name} - #{whatsnew.date}"
       puts "Link: #{whatsnew.url}" #NEED TO SCRAPE CORRECT ELEMENTS FOR LINK
+      # How to add #{domain} into a .css element scrape?
     end
+
   end
 
   def menu
     input = nil
     while input != 'exit'
+      puts ""
       puts "Please enter the product number you are interested in for more information."
       input = gets.strip.downcase
 
@@ -33,7 +36,8 @@ class TraderjoesWhatsNew::CLI
       elsif input == "exit"
         goodbye
       else
-        puts "Input unknown. Please enter a product number, 'list', or 'exit'."
+        puts ""
+        puts "!!! Input unknown. Please type a product number, 'list', or 'exit'."
       end
     end
   end

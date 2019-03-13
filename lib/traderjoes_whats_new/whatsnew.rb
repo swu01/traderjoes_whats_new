@@ -14,12 +14,14 @@ class TraderjoesWhatsNew::WhatsNew
     end
 
   def self.scrape_traderjoes
-    doc = Nokogiri::HTML(open("https://www.traderjoes.com/digin/category/What's%20New"))
+    domain = "https://www.traderjoes.com/"
+    doc = Nokogiri::HTML(open("#{domain}/digin/category/What's%20New"))
     whatsnew = self.new
     # whatsnew = self.new
     # #main page = doc.css("#contentbegin").text
     whatsnew.name = doc.css("#contentbegin h1").first.text
     whatsnew.date = doc.css(".article .timestamp strong").first.text
+  
     # whatsnew.url = doc.url(".article href").text
     # whatsnew.description = true
     # whatsnew.url = true
