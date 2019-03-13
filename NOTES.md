@@ -25,3 +25,9 @@ What's a deal?
 name = .article h1.lead
 date = .article .timestamp
 description = .article p:nth-child(2)
+
+---
+
+After showing PRODUCT and DATE, input should show:
+1) description
+ 

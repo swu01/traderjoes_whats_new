@@ -20,7 +20,7 @@ class TraderjoesWhatsNew::WhatsNew
     # #main page = doc.css("#contentbegin").text
     whatsnew.name = doc.css("#contentbegin h1").first.text
     whatsnew.date = doc.css(".article .timestamp strong").first.text
-    # whatsnew.url = doc.url(".article a href").text
+    # whatsnew.url = doc.url(".article href").text
     # whatsnew.description = true
     # whatsnew.url = true
     #description = doc.css("article .p")
