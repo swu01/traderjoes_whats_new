@@ -10,13 +10,13 @@ class TraderjoesWhatsNew::CLI
 
     puts ""
     puts "---------- Welcome to TRADER JOE'S ----------"
-    puts "------- Below is a list of WHATS NEW: -------"
+    puts "------- Below is a list of what's new!: -------"
     puts ""
     @whatsnew = TraderjoesWhatsNew::WhatsNew.today
     @whatsnew.each.with_index(1) do |whatsnew, i|
       puts "#{i}. #{whatsnew.name} - #{whatsnew.date}"
       puts "Link: #{whatsnew.url}" #NEED TO SCRAPE CORRECT ELEMENTS FOR LINK
-      # How to add #{domain} into a .css element scrape?
+      # How to add #{domain} into a .css element scrape? (.article href)
     end
 
   end
@@ -37,12 +37,14 @@ class TraderjoesWhatsNew::CLI
         goodbye
       else
         puts ""
-        puts "!!! Input unknown. Please type a product number, 'list', or 'exit'."
+        puts "Sorry but that input is unknown.."
+        puts "Please start over below - otherwise type 'list' or 'exit'."
       end
     end
   end
 
   def goodbye
+    puts ""
     puts "Check back soon for what's new at Trader Joe's!"
   end
 
