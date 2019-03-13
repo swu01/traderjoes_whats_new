@@ -15,7 +15,7 @@ class TraderjoesWhatsNew::CLI
     @whatsnew = TraderjoesWhatsNew::WhatsNew.today
     @whatsnew.each.with_index(1) do |whatsnew, i|
       puts "#{i}. #{whatsnew.name} - #{whatsnew.date}"
-      puts "Link: #{whatsnew.url}"
+      puts "Link: #{whatsnew.url}" #NEED TO SCRAPE CORRECT ELEMENTS FOR LINK
     end
   end
 
@@ -27,6 +27,7 @@ class TraderjoesWhatsNew::CLI
 
       if input.to_i > 0
         @whatsnew[input.to_i-1] #minus 1 because you want the array index
+        # NEED TO GET DESCRIPTION WORKING #{whatsnew.description}
       elsif input == "list"
         list_whats_new
       elsif input == "exit"
