@@ -38,14 +38,14 @@ class TraderjoesWhatsNew::CLI
       else
         puts ""
         puts "Sorry but that input is unknown.."
-        puts "Please start over below - otherwise type 'list' or 'exit'."
+        puts "Please start over below. To see the list again - type 'list'. To exit - type 'exit'."
       end
     end
   end
 
   def goodbye
     puts ""
-    puts "Check back soon for what's new at Trader Joe's!"
+    puts "Check back soon for what's new at Trader Joe's"
   end
 
 end
